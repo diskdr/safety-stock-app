@@ -12,10 +12,16 @@ import time
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Safety Stock Tracker", layout="wide", initial_sidebar_state="expanded")
 
-# --- HIDE STREAMLIT UI (GitHub Icon, Menu, and Footer) ---
+# --- HIDE STREAMLIT UI (Safely) ---
 hide_st_style = """
             <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
+            /* Hide the main header (which holds the GitHub and Deploy buttons) */
+            header {visibility: hidden;}
+            
+            /* BUT bring back the sidebar toggle button! */
+            [data-testid="collapsedControl"] {visibility: visible !important;}
+            
+            /* Hide the Streamlit watermark at the bottom */
             footer {visibility: hidden !important;}
             </style>
             """
