@@ -12,6 +12,15 @@ import time
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Safety Stock Tracker", layout="wide", initial_sidebar_state="expanded")
 
+# --- HIDE STREAMLIT UI (GitHub Icon, Menu, and Footer) ---
+hide_st_style = """
+            <style>
+            [data-testid="stToolbar"] {visibility: hidden !important;}
+            footer {visibility: hidden !important;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 IMAGE_DIR = "images"
 if not os.path.exists(IMAGE_DIR):
     os.makedirs(IMAGE_DIR)
