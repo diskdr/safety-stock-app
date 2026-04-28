@@ -14,17 +14,12 @@ st.set_page_config(page_title="Safety Stock Tracker", layout="wide", initial_sid
 
 # --- HIDE STREAMLIT UI (Safely) ---
 hide_st_style = """
-            <style>
-            /* Hide the main header (which holds the GitHub and Deploy buttons) */
-            header {visibility: hidden;}
-            
-            /* BUT bring back the sidebar toggle button! */
-            [data-testid="collapsedControl"] {visibility: visible !important;}
-            
-            /* Hide the Streamlit watermark at the bottom */
-            footer {visibility: hidden !important;}
-            </style>
-            """
+<style>
+header {visibility: hidden;}
+[data-testid="collapsedControl"] {visibility: visible !important;}
+footer {visibility: hidden !important;}
+</style>
+"""
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 IMAGE_DIR = "images"
