@@ -10,7 +10,7 @@ import urllib.parse
 import time
 
 # --- CONFIGURATION ---
-st.set_page_config(page_title="Safety Stock Tracker", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Maintenance Inventory", layout="wide", initial_sidebar_state="expanded")
 
 IMAGE_DIR = "images"
 if not os.path.exists(IMAGE_DIR):
@@ -91,8 +91,8 @@ def get_data():
             temp_df['Item Name'] = temp_df['Item Name'].astype(str)
         if 'Current Qty' in temp_df.columns:
             temp_df['Current Qty'] = pd.to_numeric(temp_df['Current Qty'], errors='coerce').fillna(0)
-        if 'Safety Stock Qty' in temp_df.columns:
-            temp_df['Safety Stock Qty'] = pd.to_numeric(temp_df['Safety Stock Qty'], errors='coerce').fillna(0)
+        if ' Qty' in temp_df.columns:
+            temp_df[' Qty'] = pd.to_numeric(temp_df[' Qty'], errors='coerce').fillna(0)
             
     return temp_df
 
@@ -152,7 +152,7 @@ if page == "Inventory Update":
     col_title, col_logo = st.columns([6, 1])
     
     with col_title:
-        st.title("📦 Safety Stock Tracker")
+        st.title("📦 Maintenance Inventory")
         st.caption("Created by Deanie • Version 1.0.0")
         
     with col_logo:
