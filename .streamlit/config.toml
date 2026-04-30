@@ -13,3 +13,6 @@ textColor = "#2C3A21"
 
 # Font style
 font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
