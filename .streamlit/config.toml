@@ -1,0 +1,15 @@
+[theme]
+# Vibrant Green from the palette for main buttons and highlights
+primaryColor = "#69B113"
+
+# Cream/Off-white for the main app background
+backgroundColor = "#F7F2E2"
+
+# Very Light Mint for the sidebar, dialog boxes, and secondary containers
+secondaryBackgroundColor = "#E2F2E6"
+
+# Deep Forest Green for all standard text (softer and more natural than pure black)
+textColor = "#2C3A21"
+
+# Font style
+font = "sans serif"
